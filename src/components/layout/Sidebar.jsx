@@ -14,16 +14,56 @@ export default function Sidebar() {
               to="/dashboard"
               className="block p-2 rounded hover:bg-slate-800"
             >
-              Dashboard
+              Stock Liquidos
             </Link>
           </li>
 
           <li>
             <Link
-              to="/products"
+              to="/component"
               className="block p-2 rounded hover:bg-slate-800"
             >
-              Products
+              Componentes
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/type-component"
+              className="block p-2 rounded hover:bg-slate-800"
+            >
+              Tipo de Componentes
+            </Link>
+          </li>
+           <li>
+            <Link
+              to="/container"
+              className="block p-2 rounded hover:bg-slate-800"
+            >
+              Envases
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/type-container"
+              className="block p-2 rounded hover:bg-slate-800"
+            >
+              Tipo de envase
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/stock-container"
+              className="block p-2 rounded hover:bg-slate-800"
+            >
+              Stock envases
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/formulas"
+              className="block p-2 rounded hover:bg-slate-800"
+            >
+              Formulas
             </Link>
           </li>
 

@@ -7,10 +7,13 @@ import toast from "react-hot-toast";
 import { login } from "../../services/auth.service";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { getBrand } from "../../services/brand.service";
+import { usePersistedState } from "../../hooks/usePersistedState";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [brand,setBrand]=  usePersistedState("brand",{} ) 
     const { setUser } = useAuth();
   const navigate = useNavigate();
   
@@ -19,6 +22,9 @@ export default function Login() {
 
   try {
     const data = await login(email, password);
+    const brandData = await getBrand(); // <-- get it first
+    
+    setBrand(brandData); 
 
     console.log(data.user,"aaaaaaaaaaaaaaaaaaaaaaaaaa");
     setUser(data.user);
